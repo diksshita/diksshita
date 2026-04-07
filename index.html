@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diksshita T | Portfolio</title>
+  <meta name="description" content="Portfolio of Diksshita T — Turning complex problems into elegant, functional code." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Bubble cursor -->
+  <div id="cursor-outer" class="cursor-outer"></div>
+  <div id="cursor-dot" class="cursor-dot"></div>
+
+  <!-- Background grid -->
+  <div class="bg-grid"></div>
+  <!-- Ambient glow blobs -->
+  <div class="glow-blob blob1"></div>
+  <div class="glow-blob blob2"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <div class="nav-brand">DT<span class="accent">.</span></div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero">
+    <div class="hero-text reveal">
+      <p class="greeting">// Hello, World! I'm</p>
+      <h1 class="glitch" data-text="Diksshita T">Diksshita T</h1>
+      <h2 class="hero-role">Student &amp; Developer <span class="cursor-blink">_</span></h2>
+      <p class="hero-tagline">"Turning complex problems into elegant, functional code."</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Get In Touch <i class="fa-solid fa-arrow-right"></i></a>
+        <a id="resume-btn"
+           href="data:application/octet-stream;base64,UkVTVU1F"
+           download="Diksshita_T_Resume.pdf"
+           class="btn btn-secondary">
+          <i class="fa-solid fa-download"></i> Resume
+        </a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/diksshita" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/diksshita-t-237a07333" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:diksshitat1@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="hero-visual reveal delay-2">
+      <div class="photo-ring">
+        <svg class="ring-svg" viewBox="0 0 220 220">
+          <defs>
+            <linearGradient id="ring-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00e5ff"/>
+              <stop offset="100%" stop-color="#39ff7a"/>
+            </linearGradient>
+          </defs>
+          <circle cx="110" cy="110" r="105" fill="none" stroke="url(#ring-grad)" stroke-width="2" stroke-dasharray="10 6"/>
+        </svg>
+        <div class="photo-frame">
+          <!-- Replace src with real base64 photo. Placeholder gradient used. -->
+          <div class="photo-placeholder" aria-label="Profile photo of Diksshita T">
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+      </div>
+      <!-- floating badges -->
+      <div class="badge badge-top">AI / ML</div>
+      <div class="badge badge-right">IoT</div>
+      <div class="badge badge-bottom">Open Source</div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="section-header reveal">
+      <span class="section-label">01 | about</span>
+      <h2 class="section-title">About Me<span class="accent">.</span></h2>
+    </div>
+    <div class="about-grid reveal">
+      <div class="about-card glass">
+        <p>I'm an enthusiastic <strong>Information Science</strong> student at VVCE, Mysuru — passionate about turning ideas into reality through clean code and innovative tech. My interests span machine learning, IoT systems, and full-stack web development.</p>
+        <p>I love competing in hackathons, leading events, and constantly levelling up my skill set.</p>
+        <ul class="detail-list">
+          <li><span class="dl-label"><i class="fas fa-map-marker-alt accent"></i> Location</span><span>Mysuru, Karnataka</span></li>
+          <li><span class="dl-label"><i class="fas fa-envelope accent"></i> Email</span><a href="mailto:diksshitat1@gmail.com">diksshitat1@gmail.com</a></li>
+          <li><span class="dl-label"><i class="fab fa-github accent"></i> GitHub</span><a href="https://github.com/diksshita" target="_blank" rel="noopener">github.com/diksshita</a></li>
+          <li><span class="dl-label"><i class="fab fa-linkedin accent"></i> LinkedIn</span><a href="https://www.linkedin.com/in/diksshita-t-237a07333" target="_blank" rel="noopener">Diksshita T</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section id="education">
+    <div class="section-header reveal">
+      <span class="section-label">02 | education</span>
+      <h2 class="section-title">Education<span class="accent">.</span></h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card glass">
+          <span class="tl-date">2024 – 2028</span>
+          <h3>B.E. in Information Science</h3>
+          <p class="tl-institute">Vidyavardhaka College of Engineering, Mysuru, Karnataka</p>
+          <span class="tl-badge">Pursuing</span>
+        </div>
+      </div>
+      <div class="tl-item reveal delay-1">
+        <div class="tl-dot"></div>
+        <div class="tl-card glass">
+          <span class="tl-date">2024</span>
+          <h3>12th / PUC — 95.83%</h3>
+          <p class="tl-institute">Marimallappa's PU College</p>
+          <span class="tl-badge grade">95.83%</span>
+        </div>
+      </div>
+      <div class="tl-item reveal delay-2">
+        <div class="tl-dot"></div>
+        <div class="tl-card glass">
+          <span class="tl-date">2022</span>
+          <h3>10th — 97.92%</h3>
+          <p class="tl-institute">Marimallappa's High School</p>
+          <span class="tl-badge grade">97.92%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills">
+    <div class="section-header reveal">
+      <span class="section-label">03 | skills</span>
+      <h2 class="section-title">Skills Overview<span class="accent">.</span></h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card glass reveal">
+        <div class="sc-icon"><i class="fas fa-code"></i></div>
+        <h3>Programming</h3>
+        <div class="tag-list">
+          <span class="tag">Python</span>
+          <span class="tag">C</span>
+          <span class="tag">JavaScript</span>
+        </div>
+      </div>
+      <div class="skill-card glass reveal delay-1">
+        <div class="sc-icon"><i class="fas fa-globe"></i></div>
+        <h3>Web</h3>
+        <div class="tag-list">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+        </div>
+      </div>
+      <div class="skill-card glass reveal delay-2">
+        <div class="sc-icon"><i class="fas fa-database"></i></div>
+        <h3>Databases &amp; Tools</h3>
+        <div class="tag-list">
+          <span class="tag">SQL</span>
+          <span class="tag">Git / GitHub</span>
+          <span class="tag">VS Code</span>
+          <span class="tag">Google Cloud</span>
+        </div>
+      </div>
+      <div class="skill-card glass reveal">
+        <div class="sc-icon"><i class="fas fa-brain"></i></div>
+        <h3>Data Science &amp; ML</h3>
+        <div class="tag-list">
+          <span class="tag">Python DS</span>
+          <span class="tag">Pandas</span>
+          <span class="tag">NumPy</span>
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Deep Learning</span>
+          <span class="tag">Data Visualization</span>
+        </div>
+      </div>
+      <div class="skill-card glass reveal delay-1">
+        <div class="sc-icon"><i class="fas fa-microchip"></i></div>
+        <h3>Hardware / IoT</h3>
+        <div class="tag-list">
+          <span class="tag">Arduino</span>
+          <span class="tag">ESP8266</span>
+          <span class="tag">IoT Systems</span>
+        </div>
+      </div>
+      <div class="skill-card glass reveal delay-2">
+        <div class="sc-icon"><i class="fas fa-people-group"></i></div>
+        <h3>Soft Skills</h3>
+        <div class="tag-list">
+          <span class="tag">Leadership</span>
+          <span class="tag">Communication</span>
+          <span class="tag">Problem Solving</span>
+          <span class="tag">Teamwork</span>
+          <span class="tag">Project Mgmt</span>
+          <span class="tag">Public Speaking</span>
+          <span class="tag">Time Mgmt</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects">
+    <div class="section-header reveal">
+      <span class="section-label">04 | projects</span>
+      <h2 class="section-title">Featured Project<span class="accent">.</span></h2>
+    </div>
+    <div class="project-card glass reveal">
+      <div class="project-top">
+        <div class="project-icon"><i class="fas fa-eye"></i></div>
+        <span class="project-status done">Completed</span>
+      </div>
+      <h3 class="project-name">Object Detection</h3>
+      <p class="project-cats">Safety · Health · Environment · EdTech · AI · Web · IoT</p>
+      <p class="project-short">A real-time system that identifies and tracks multiple objects within a computer vision context.</p>
+      <details class="project-more">
+        <summary>Read more <i class="fas fa-chevron-down"></i></summary>
+        <p>This project leverages the YOLO (You Only Look Once) algorithm and OpenCV to perform real-time object detection with high accuracy and speed. It enhances situational awareness by identifying multiple object classes with visual bounding boxes and confidence scores. Features include integrated centroid tracking for movement monitoring and a modular architecture for easy deployment in security surveillance or industrial automation.</p>
+      </details>
+      <div class="tag-list mt">
+        <span class="tag accent-tag">OpenCV</span>
+        <span class="tag accent-tag">AI / ML</span>
+        <span class="tag accent-tag">IoT</span>
+        <span class="tag accent-tag">YOLO</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACHIEVEMENTS ===== -->
+  <section id="achievements">
+    <div class="section-header reveal">
+      <span class="section-label">05 | achievements</span>
+      <h2 class="section-title">Achievements<span class="accent">.</span></h2>
+    </div>
+    <div class="ach-grid">
+      <div class="ach-card glass reveal">
+        <div class="ach-icon"><i class="fas fa-laptop-code"></i></div>
+        <h3>Hackathons</h3>
+        <ul>
+          <li><strong>TechTatva 2k25</strong> — Participation</li>
+          <li><strong>CodeHunt 2k26</strong> — Participation</li>
+        </ul>
+      </div>
+      <div class="ach-card glass reveal delay-1">
+        <div class="ach-icon"><i class="fas fa-certificate"></i></div>
+        <h3>Certifications</h3>
+        <ul>
+          <li>Participation — CodeHunt 2k26</li>
+          <li>Participation — TechTatva 2k25</li>
+        </ul>
+      </div>
+      <div class="ach-card glass reveal delay-2">
+        <div class="ach-icon"><i class="fas fa-star"></i></div>
+        <h3>Leadership</h3>
+        <ul>
+          <li><strong>Coordinator</strong> — PentaFest (VVCE)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="section-header reveal">
+      <span class="section-label">06 | contact</span>
+      <h2 class="section-title">Get In Touch<span class="accent">.</span></h2>
+    </div>
+    <div class="contact-wrap">
+      <div class="contact-info reveal">
+        <p>Have a project in mind, or just want to say hi? Fill in the form and I'll get back to you!</p>
+        <ul class="contact-details">
+          <li><i class="fas fa-envelope accent"></i> <a href="mailto:diksshitat1@gmail.com">diksshitat1@gmail.com</a></li>
+          <li><i class="fas fa-map-marker-alt accent"></i> Mysuru, Karnataka</li>
+        </ul>
+      </div>
+      <form id="contact-form" class="contact-form glass reveal delay-1" novalidate>
+        <div class="field-group">
+          <input type="text" id="cf-name" name="name" placeholder=" " required autocomplete="off" />
+          <label for="cf-name">Your Name</label>
+        </div>
+        <div class="field-group">
+          <input type="email" id="cf-email" name="email" placeholder=" " required autocomplete="off" />
+          <label for="cf-email">Email Address</label>
+        </div>
+        <div class="field-group">
+          <textarea id="cf-msg" name="message" rows="5" placeholder=" " required></textarea>
+          <label for="cf-msg">Your Message</label>
+        </div>
+        <button type="submit" class="btn btn-primary send-btn" id="send-btn">
+          <span class="btn-text">Send Message</span>
+          <i class="fas fa-paper-plane"></i>
+        </button>
+        <p id="form-status" class="form-status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">DT<span class="accent">.</span></div>
+      <p class="footer-copy">&copy; 2026 Diksshita T — Built with <span class="accent">&#10084;</span> &amp; code.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/diksshita" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/diksshita-t-237a07333" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:diksshitat1@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
