@@ -1,0 +1,36 @@
+Jenkins CI Pipeline — Short Command Flow
+Step 1: Create Java program in GitHub
+Create a public repository named simplejava.
+
+Create a file named Simple.java and commit this code:
+
+public class Simple {
+    public static void main(String[] args) {
+        System.out.println("Jenkins CI Build Successful");
+    }
+}
+
+
+
+Step 2: Configure Jenkins
+1. Open http://localhost:8080
+2. Click New Item → enter simplejava.
+3. Select Freestyle project → OK.
+4. Under Source Code Management → select Git.
+5. Repository URL: https://github.com/diksshita/simplejava.git
+6. Branch: */main
+Step 3: Configure build
+Under Build Steps → Add build step → Execute Windows batch command, type:
+java -version
+javac Simple.java
+java Simple
+
+
+Click Save.
+Step 4: Execute
+1. Open the simplejava Jenkins job.
+2. Click Build Now.
+3. Open the latest build → Console Output.
+Expected output
+Jenkins CI Build Successful
+Finished: SUCCESS
