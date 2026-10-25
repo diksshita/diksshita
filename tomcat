@@ -1,0 +1,62 @@
+1. Create the project
+Open CMD and type:
+cd Desktop
+mkdir TomcatProject
+cd TomcatProject
+notepad index.html
+
+
+Write the HTML code in Notepad, then save it.
+<html>
+<body>
+<h1>Hello from Apache Tomcat!</h1>
+<p>My DevOps Lab Program 3 is successful.</p>
+</body>
+</html>
+
+
+2. Create the Dockerfile
+notepad Dockerfile
+
+
+Write and save this code:
+FROM tomcat:10.1-jdk17-temurin
+RUN rm -rf /usr/local/tomcat/webapps/*
+COPY index.html /usr/local/tomcat/webapps/ROOT/index.html
+EXPOSE 8080
+CMD ["catalina.sh", "run"]
+
+*
+ren Dockerfile.txt Dockerfile
+
+3. Build the Docker image
+docker build -t tomcat-lab .
+
+
+4. Check the image
+docker images
+
+
+Expected: tomcat-lab appears in the image list.
+5. Run the container
+docker run -d -p 8081:8080 --name tomcat-container tomcat-lab
+
+
+We use port 8081 because port 8080 was already occupied on your laptop.
+6. Check the running container
+docker ps
+
+
+Expected: tomcat-container shows a status of Up.
+7. Display the webpage
+Open Chrome and enter:
+http://localhost:8081Expected output:
+Hello from Apache Tomcat!
+My DevOps Lab Program 3 is successful.
+Result
+
+
+docker login
+docker tag tomcat-lab:latest dikkshitat/tomcat-lab:latest
+docker push dikkshitat/tomcat-lab:latest
+The Docker image was created successfully, and the HTML webpage was deployed and accessed through the Apache Tomcat container.
