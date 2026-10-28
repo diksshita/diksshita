@@ -1,0 +1,65 @@
+1. Create the repository
+On GitHub, create a repository named Maven.
+2. Create these files on GitHub
+Repository → Add file → Create new file.
+
+File 1: pom.xml
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.example</groupId>
+  <artifactId>Maven</artifactId>
+  <version>1.0</version>
+  <properties>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+  </properties>
+</project>
+
+
+File 2: src/main/java/com/example/App.java
+package com.example;
+
+public class App {
+    public static void main(String[] args) {
+        System.out.println("Java CI/CD Pipeline");
+        System.out.println("Maven Build Successful!");
+    }
+}
+
+
+File 3: .github/workflows/maven.yml
+
+
+name: Java CI/CD Pipeline
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: temurin
+
+      - name: Build with Maven
+        run: mvn -B clean package
+
+
+Commit each file to the main branch.
+3. Execution flow to memorize
+Command / click flow
+1. Open GitHub repository → Maven.
+2. Create pom.xml.
+3. Create App.java.
+4. Create .github/workflows/maven.yml.
+5. Commit all files to main.
+6. Click Actions → Java CI/CD Pipeline.
+7. Open the latest run → click build.
+8. Verify the green tick (✓) and BUILD SUCCESS in the logs.
